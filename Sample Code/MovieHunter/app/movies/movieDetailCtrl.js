@@ -11,10 +11,9 @@
     function MovieDetailCtrl(movieResource, $routeParams) {
         var vm = this;
 
-        vm.movieId = $routeParams.movieId;
         vm.movie = '';
 
-        movieResource.get({ id: vm.movieId },
+        movieResource.get({ movieId: $routeParams.movieId },
             function (data) {
                 vm.movie = data;
             });

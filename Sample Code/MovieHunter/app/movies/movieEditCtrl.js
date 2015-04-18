@@ -15,7 +15,7 @@
         vm.title = "";
         vm.message = "";
 
-        movieResource.get({ id: $routeParams.movieId },
+        movieResource.get({ movieId: $routeParams.movieId },
             function (data) {
                 vm.movie = data;
 

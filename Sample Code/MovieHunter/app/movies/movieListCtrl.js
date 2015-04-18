@@ -25,7 +25,7 @@
             },
             function (response) {
                 vm.message = response.message + "\r\n";
-                if (response.data.exceptionMessage)
+                if (response.data && response.data.exceptionMessage)
                     vm.message += response.data.exceptionMessage;
             });
     }
