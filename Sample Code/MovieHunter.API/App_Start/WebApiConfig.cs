@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json.Serialization;
 using System.Web.Http;
-using System.Web.Http.Cors;
 
 namespace MovieHunter.API
 {
@@ -11,7 +10,7 @@ namespace MovieHunter.API
             // Cross-origin resource sharing
             // Allows acces from a domain outside of the domain the resource
             // originated from.
-            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
+            config.EnableCors();
 
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver =
               new CamelCasePropertyNamesContractResolver();

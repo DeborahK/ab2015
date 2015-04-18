@@ -6,22 +6,20 @@
         .controller("MovieEditCtrl",
                     ["movieResource",
                         "$routeParams",
-                        "$location",
                      MovieEditCtrl]);
 
-    function MovieEditCtrl(movieResource, $routeParams, $location) {
+    function MovieEditCtrl(movieResource, $routeParams) {
         var vm = this;
 
-        vm.Id = $routeParams.movieId;
         vm.movie = "";
         vm.title = "";
         vm.message = "";
 
-        movieResource.get({ id: vm.Id },
+        movieResource.get({ id: $routeParams.movieId },
             function (data) {
                 vm.movie = data;
 
-                if (vm.movieId) {
+                if (vm.movie.movieId) {
                     vm.title = vm.movie.title
                 }
                 else {
@@ -35,12 +33,8 @@
                     vm.message = "Save successful.";
                 })
             } else {
-                vm.message = "Please correct the validation errors first.";
+                vm.message = "Please correct the validation errors and try saving again.";
             }
-        };
-
-        vm.cancel = function () {
-            $location.path("/searchByTitle")
         };
     }
 }());

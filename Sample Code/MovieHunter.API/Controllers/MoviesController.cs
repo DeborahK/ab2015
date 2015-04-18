@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 
 namespace MovieHunter.API.Controllers
@@ -10,6 +11,7 @@ namespace MovieHunter.API.Controllers
     /// <summary>
     /// API for Movies
     /// </summary>
+    [EnableCorsAttribute("http://localhost:52436", "*", "*")]
     public class MoviesController : ApiController
     {
         /// <summary>
