@@ -11,7 +11,7 @@ namespace MovieHunter.API.Controllers
     /// <summary>
     /// API for Movies
     /// </summary>
-    [EnableCorsAttribute("http://localhost:52436", "*", "*")]
+    [EnableCorsAttribute("http://localhost:64492", "*", "*")]
     public class MoviesController : ApiController
     {
         /// <summary>
