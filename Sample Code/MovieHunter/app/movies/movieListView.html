@@ -29,7 +29,8 @@
                         <td>Title</td>
                         <td>Director</td>
                         <td>Release Date</td>
-                        <td>Rating</td>
+                        <td>MPAA Rating</td>
+                        <td><i class="glyphicon glyphicon-star"></i></td>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,6 +45,7 @@
                         <td>{{ movie.director }}</td>
                         <td>{{ movie.releaseDate | date }}</td>
                         <td>{{ movie.mpaa | uppercase}}</td>
+                        <td>{{ movie.starRating }}</td>
                         <td>
                             <a class="btn btn-primary"
                                ng-href="#editMovie/{{movie.movieId}}">

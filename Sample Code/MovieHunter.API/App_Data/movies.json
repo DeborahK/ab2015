@@ -6,6 +6,7 @@
     "Imageurl": "http://www.coverwhiz.com/content/The-Lord-Of-The-Rings-The-Fellowship-Of-The-Ring_small.jpg",
     "MovieId": 1,
     "Mpaa": "pg-13",
+    "StarRating": 4.8,
     "ReleaseDate": "2001-12-19T00:00:00",
     "Title": "The Lord of the Rings: The Fellowship of the Ring"
   },
@@ -17,6 +18,7 @@
     "MovieId": 2,
     "Mpaa": "pg-13",
     "ReleaseDate": "2002-12-18T00:00:00",
+    "StarRating": 4.5,
     "Title": "The Lord of the Rings: The Two Towers"
   },
   {
@@ -27,6 +29,7 @@
     "MovieId": 3,
     "Mpaa": "pg-13",
     "ReleaseDate": "2003-12-17T00:00:00",
+    "StarRating": 5,
     "Title": "The Lord of the Rings: The Return of the King"
   },
   {
@@ -37,6 +40,7 @@
     "MovieId": 4,
     "Mpaa": "nr",
     "ReleaseDate": "1971-02-02T00:00:00",
+    "StarRating": 4.8,
     "Title": "The Point"
   },
   {
@@ -47,6 +51,7 @@
     "MovieId": 5,
     "Mpaa": "pg-13",
     "ReleaseDate": "2003-07-09T00:00:00",
+    "StarRating": 5,
     "Title": "Pirates Of The Caribbean: Curse Of The Black Pearl"
   },
   {
@@ -56,6 +61,7 @@
     "Imageurl": "http://www.coverwhiz.com/content/Pirates-Of-The-Caribbean-Dead-Mans-Chest.jpg",
     "MovieId": 6,
     "Mpaa": "pg-13",
+    "StarRating": 4,
     "ReleaseDate": "2006-07-07T00:00:00",
     "Title": "Pirates Of The Caribbean: Dead Man's Chest"
   }

@@ -15,6 +15,7 @@ namespace MovieHunter.API.Models
         public int MovieId { get; set; }
         public string Mpaa { get; set; }
         public DateTime ReleaseDate { get; set; }
+        public decimal StarRating { get; set; }
         public string Title { get; set; }
 
     }
