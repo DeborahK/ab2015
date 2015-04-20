@@ -25,8 +25,8 @@
                 imageurl: "http://www.coverwhiz.com/content/The-Lord-Of-The-Rings-The-Two-Towers_small.jpg",
                 movieId: 2,
                 mpaa: "pg-13",
-                starRating: "2002-12-18T00:00:00",
-                releaseDate: 4.5,
+                releaseDate: "2002-12-18T00:00:00",
+                starRating: 4.5,
                 title: "The Lord of the Rings: The Two Towers"
             },
             {
@@ -36,8 +36,8 @@
                 imageurl: "http://www.coverwhiz.com/content/The-Lord-Of-The-Rings-The-Return-Of-The-King_small.jpg",
                 movieId: 3,
                 mpaa: "pg-13",
-                starRating: "2003-12-17T00:00:00",
-                releaseDate: 5,
+                releaseDate: "2003-12-17T00:00:00",
+                starRating: 5,
                 title: "The Lord of the Rings: The Return of the King"
             },
             {
@@ -47,8 +47,8 @@
                 imageurl: null,
                 movieId: 4,
                 mpaa: "nr",
-                starRating: "1971-02-02T00:00:00",
-                releaseDate: 4.8,
+                releaseDate: "1971-02-02T00:00:00",
+                starRating: 4.8,
                 title: "The Point"
             }
         ];
