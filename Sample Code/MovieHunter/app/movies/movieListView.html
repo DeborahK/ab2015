@@ -34,7 +34,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="movie in vm.movies | filter : {title:listFilter} | orderBy : 'title'">
+                    <tr ng-repeat="movie in vm.movies | filter : {title:listFilter}">
                         <td>
                             <img ng-show="vm.showImage" style="width:50px;margin:2px"
                                  ng-src="{{movie.imageurl}}" title="{{movie.title}}">

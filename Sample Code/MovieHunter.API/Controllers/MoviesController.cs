@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
+using System.Web.OData;
 
 namespace MovieHunter.API.Controllers
 {
@@ -19,6 +20,7 @@ namespace MovieHunter.API.Controllers
         /// </summary>
         /// <returns></returns>
         /// <example>GET api/movies</example>
+        [EnableQuery]
         [ResponseType(typeof(Movie))]
         public IHttpActionResult Get()
         {
