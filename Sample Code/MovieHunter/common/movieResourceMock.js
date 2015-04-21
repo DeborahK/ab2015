@@ -57,7 +57,7 @@
 
         $httpBackend.whenGET(moviesUrl).respond(movies);
 
-        var editingRegex = new RegExp(moviesUrl + "/[0-9][0-9]*", "");
+        var editingRegex = new RegExp(moviesUrl + "/[0-9]+", "");
         $httpBackend.whenGET(editingRegex).respond(function (method, url, data) {
             var movie = { "movieId": 0 };
             var parameters = url.split("/");
