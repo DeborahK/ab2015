@@ -25,17 +25,8 @@
                                ng-minlength="3"
                                ng-maxlength="50" />
                     </div>
-                    <!-- With ngMessages -->
                     <span class="help-block has-error"
                           ng-if="movieForm.inputMovieTitle.$dirty">
-                        <span ng-messages="movieForm.inputMovieTitle.$error">
-                            <span ng-message="required">Movie title is required</span>
-                            <span ng-message="minlength">Movie title must be at least 3 characters in length</span>
-                            <span ng-message="maxlength">Movie title cannot exceed 50 characters in length</span>
-                        </span>
-                    </span>
-                    <!-- Without ngMessages
-                        <span class="help-block has-error">
                         <span ng-show="movieForm.inputMovieTitle.$error.required">
                             Movie title is required.
                         </span>
@@ -45,7 +36,7 @@
                         <span ng-show="movieForm.inputMovieTitle.$error.maxlength">
                             Movie title cannot exceed 50 characters in length.
                         </span>
-                    </span>-->
+                    </span>
                 </div>
 
                 <div class="form-group"
