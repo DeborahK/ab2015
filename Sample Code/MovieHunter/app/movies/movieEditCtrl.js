@@ -20,7 +20,7 @@
                 vm.movie = data;
 
                 if (vm.movie.movieId) {
-                    vm.title = vm.movie.title
+                    vm.title = vm.movie.title;
                 }
                 else {
                     vm.title = "New Movie";
@@ -31,7 +31,7 @@
             if (isValid) {
                 vm.movie.$save(function (data) {
                     vm.message = "Save successful.";
-                })
+                });
             } else {
                 vm.message = "Please correct the validation errors and try saving again.";
             }

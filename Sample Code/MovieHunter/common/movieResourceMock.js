@@ -98,7 +98,7 @@
         // Catch all for testing purposes
         $httpBackend.whenGET(/api/).respond(function (method, url, data) {
             return [200, movies, {}];
-        });;
+        });
 
         // Pass through any requests for html files
         $httpBackend.whenGET(/\.html$/).passThrough();
