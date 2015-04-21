@@ -10,7 +10,6 @@
             {
                 description: "A meek hobbit of the Shire and eight companions set out on a journey to Mount Doom to destroy the One Ring and the dark lord Sauron.",
                 director: "Peter Jackson",
-                imdbLink: "http://www.imdb.com/title/tt0120737/?ref_=nv_sr_1",
                 imageurl: "http://www.coverwhiz.com/content/The-Lord-Of-The-Rings-The-Fellowship-Of-The-Ring_small.jpg",
                 movieId: 1,
                 mpaa: "pg-13",
@@ -21,7 +20,6 @@
             {
                 description: "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",
                 director: "Peter Jackson",
-                imdbLink: "http://www.imdb.com/title/tt0167261/?ref_=fn_al_tt_3",
                 imageurl: "http://www.coverwhiz.com/content/The-Lord-Of-The-Rings-The-Two-Towers_small.jpg",
                 movieId: 2,
                 mpaa: "pg-13",
@@ -32,7 +30,6 @@
             {
                 description: "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
                 director: "Peter Jackson",
-                imdbLink: "http://www.imdb.com/title/tt0167260/?ref_=fn_al_tt_2",
                 imageurl: "http://www.coverwhiz.com/content/The-Lord-Of-The-Rings-The-Return-Of-The-King_small.jpg",
                 movieId: 3,
                 mpaa: "pg-13",
