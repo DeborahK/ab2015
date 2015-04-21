@@ -25,7 +25,17 @@
                                ng-minlength="3"
                                ng-maxlength="50" />
                     </div>
-                    <span class="help-block has-error">
+                    <!-- With ngMessages -->
+                    <span class="help-block has-error"
+                          ng-if="movieForm.inputMovieTitle.$dirty">
+                        <span ng-messages="movieForm.inputMovieTitle.$error">
+                            <span ng-message="required">Movie title is required</span>
+                            <span ng-message="minlength">Movie title must be at least 3 characters in length</span>
+                            <span ng-message="maxlength">Movie title cannot exceed 50 characters in length</span>
+                        </span>
+                    </span>
+                    <!-- Without ngMessages
+                        <span class="help-block has-error">
                         <span ng-show="movieForm.inputMovieTitle.$error.required">
                             Movie title is required.
                         </span>
@@ -35,7 +45,7 @@
                         <span ng-show="movieForm.inputMovieTitle.$error.maxlength">
                             Movie title cannot exceed 50 characters in length.
                         </span>
-                    </span>
+                    </span>-->
                 </div>
 
                 <div class="form-group"
@@ -48,6 +58,7 @@
                         <input class="form-control"
                                id="inputStarRating"
                                name="inputStarRating"
+                               placeholder="Rating (required)"
                                type="number"
                                ng-model="vm.movie.starRating"
                                required
@@ -55,15 +66,10 @@
                                max="5" />
                     </div>
                     <span class="help-block has-error">
-                        <span ng-show="movieForm.inputStarRating.$error.required">
-                            Please enter a number between 1 and 5.
-                        </span>
-                        </span>
-                       <span ng-show="movieForm.inputStarRating.$error.min">
-                            Please enter a number between 1 and 5.
-                        </span>
-                        <span ng-show="movieForm.inputStarRating.$error.max">
-                            Please enter a number between 1 and 5.
+                        <span ng-messages="movieForm.inputStarRating.$error">
+                            <span ng-message="required">Please enter a number between 1 and 5</span>
+                            <span ng-message="min">Please enter a number between 1 and 5</span>
+                            <span ng-message="max">Please enter a number between 1 and 5</span>
                         </span>
                     </span>
                 </div>
