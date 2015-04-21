@@ -14,7 +14,7 @@
                     <label class="col-md-2 control-label"
                            for="inputMovieTitle">Movie Title</label>
 
-                    <div class="col-md-4">
+                    <div class="col-md-8">
                         <input class="form-control"
                                id="inputMovieTitle"
                                name="inputMovieTitle"
@@ -23,7 +23,7 @@
                                ng-model="vm.movie.title"
                                required
                                ng-minlength="3"
-                               ng-maxlength="12" />
+                               ng-maxlength="50" />
                     </div>
                     <span class="help-block has-error">
                         <span ng-show="movieForm.inputMovieTitle.$error.required">
@@ -33,10 +33,28 @@
                             Movie title must be at least 3 characters in length.
                         </span>
                         <span ng-show="movieForm.inputMovieTitle.$error.maxlength">
-                            Movie title cannot exceed 12 characters in length.
+                            Movie title cannot exceed 50 characters in length.
                         </span>
                     </span>
                 </div>
+
+                <div class="form-group"
+                     ng-class="{'has-error':movieForm.inputDescription.$invalid &&
+                                    movieForm.inputDescription.$dirty}">
+                    <label class="col-md-2 control-label"
+                           for="inputDescription">Description</label>
+
+                    <div class="col-md-8">
+                        <textarea class="form-control"
+                                  id="inputDescription"
+                                  name="inputDescription"
+                                  placeholder="Description"
+                                  rows="3"
+                                  ng-model="vm.movie.description">
+                        </textarea>
+                    </div>
+                </div>
+                <br/>
 
                 <div class="form-group">
                     <div class="col-md-4 col-md-offset-2">
