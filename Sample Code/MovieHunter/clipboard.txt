@@ -55,7 +55,7 @@ ng-keyup="vm.cancelEntry(movieForm.inputMovieTitle, $event)"
                                placeholder="Title (required)"
                                ng-model="vm.movie.title"
                                required
-                               duplicate-title-validator="{{vm.movie.movieId}}"
+                               duplicate-title-validator="vm.movie.movieId"
                                ng-minlength="3"
                                ng-maxlength="50" />
                     </div>
