@@ -26,7 +26,7 @@
                                ng-minlength="3"
                                ng-maxlength="50" />
                     </div>
-                    <span class="help-block has-error"
+                    <span class="help-block"
                           ng-if="movieForm.inputMovieTitle.$dirty">
                         <span ng-messages="movieForm.inputMovieTitle.$error">
                             <span ng-message="required">Movie title is required</span>
@@ -53,7 +53,7 @@
                                ng-minlength="3"
                                ng-maxlength="50" />
                     </div>
-                    <span class="help-block has-error"
+                    <span class="help-block"
                           ng-if="movieForm.inputDirector.$dirty">
                         <span ng-messages="movieForm.inputDirector.$error">
                             <span ng-message="required">Director is required</span>
@@ -80,7 +80,7 @@
                                min="1"
                                max="5" />
                     </div>
-                    <span class="help-block has-error">
+                    <span class="help-block">
                         <span ng-messages="movieForm.inputStarRating.$error">
                             <span ng-message="required">Please enter a number between 1 and 5</span>
                             <span ng-message="min">Please enter a number between 1 and 5</span>
