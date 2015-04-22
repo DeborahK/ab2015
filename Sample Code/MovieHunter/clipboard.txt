@@ -49,22 +49,11 @@ ng-keyup="vm.cancelEntry(movieForm.inputMovieTitle, $event)"
                                ng-minlength="3"
                                ng-maxlength="50" />
                     </div>
-                    <span class="help-block has-error"
-                          ng-if="movieForm.inputMovieTitle.$dirty">
-                        <span ng-show="movieForm.inputMovieTitle.$error.required">
-                            Movie title is required.
+                        <span ng-messages="movieForm.inputMovieTitle.$error">
+                            <span ng-message="required">Movie title is required</span>
+                            <span ng-message="minlength">Movie title must be at least 3 characters in length</span>
+                            <span ng-message="maxlength">Movie title cannot exceed 50 characters in length</span>
+							<span ng-message="duplicateTitle">That movie title has already been used.</span>
                         </span>
-                        <span ng-show="movieForm.inputMovieTitle.$error.minlength">
-                            Movie title must be at least 3 characters in length.
-                        </span>
-                        <span ng-show="movieForm.inputMovieTitle.$error.maxlength">
-                            Movie title cannot exceed 50 characters in length.
-                        </span>
-                        <span ng-show="movieForm.inputMovieTitle.$error.duplicateTitle">
-                            That movie title has already been used.
-                        </span>
-                    </span>
-
-
 
 
