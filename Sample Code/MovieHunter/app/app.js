@@ -1,11 +1,14 @@
 ﻿(function () {
     "use strict";
 
-    // To use the mocking
-    //var app = angular.module("movieHunter", ["ngRoute", "common.services", "ngMessages", "movieResourceMock"]);
+    // To use the mocking inject : "movieResourceMock"
 
     // To use Web API
-    var app = angular.module("movieHunter", ["ngRoute", "common.services", "ngMessages"]);
+    var app = angular.module("movieHunter",
+                            ["ngRoute",
+                            "common.services",
+                            "common.directives",
+                            "ngMessages"]);
 
     app.config(["$routeProvider",
         function ($routeProvider) {
