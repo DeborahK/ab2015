@@ -36,6 +36,9 @@
                         <span ng-show="movieForm.inputMovieTitle.$error.maxlength">
                             Movie title cannot exceed 50 characters in length.
                         </span>
+                        <span ng-show="movieForm.inputMovieTitle.$error.duplicateTitle">
+                            That movie title has already been used.
+                        </span>
                     </span>
                 </div>
 

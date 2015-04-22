@@ -45,7 +45,36 @@ ng-keyup="vm.cancelEntry(movieForm.inputMovieTitle, $event)"
                             <span ng-message="directorMinRating">Minimum rating for this director is 4</span>
                         </span>
                     </span>
-                </div>
+
+--- Async Validator ---
+                    <div class="col-md-8">
+                        <input class="form-control"
+                               id="inputMovieTitle"
+                               name="inputMovieTitle"
+                               type="text"
+                               placeholder="Title (required)"
+                               ng-model="vm.movie.title"
+                               required
+                               duplicate-title-validator="{{vm.movie.movieId}}"
+                               ng-minlength="3"
+                               ng-maxlength="50" />
+                    </div>
+                    <span class="help-block has-error"
+                          ng-if="movieForm.inputMovieTitle.$dirty">
+                        <span ng-show="movieForm.inputMovieTitle.$error.required">
+                            Movie title is required.
+                        </span>
+                        <span ng-show="movieForm.inputMovieTitle.$error.minlength">
+                            Movie title must be at least 3 characters in length.
+                        </span>
+                        <span ng-show="movieForm.inputMovieTitle.$error.maxlength">
+                            Movie title cannot exceed 50 characters in length.
+                        </span>
+                        <span ng-show="movieForm.inputMovieTitle.$error.duplicateTitle">
+                            That movie title has already been used.
+                        </span>
+                    </span>
+
 
 
 

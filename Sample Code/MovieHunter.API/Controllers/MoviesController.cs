@@ -70,6 +70,34 @@ namespace MovieHunter.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Retrieves a single from the repository
+        /// with the defined title
+        /// </summary>
+        /// <returns></returns>
+        /// <example>GET api/movies/5</example>
+        [ResponseType(typeof(Movie))]
+        public IHttpActionResult Get(string title)
+        {
+            try
+            {
+                Movie movie;
+                var moviesRepository = new Models.MovieRepository();
+
+                var movies = moviesRepository.Retrieve();
+                movie = movies.FirstOrDefault(t => t.Title == title);
+                if (movie == null)
+                {
+                    return NotFound();
+                }
+                return Ok(movie);
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
+
         // POST api/movies
         /// <summary>
         /// Saves a move passed in as part of a POST request
@@ -91,14 +119,14 @@ namespace MovieHunter.API.Controllers
                     return BadRequest(ModelState);
                 }
 
-            var movieRepository = new Models.MovieRepository();
-            var newMovie = movieRepository.Save(movie);
-            if (newMovie == null)
+                var movieRepository = new Models.MovieRepository();
+                var newMovie = movieRepository.Save(movie);
+                if (newMovie == null)
                 {
                     return Conflict();
                 }
-            return Created<Movie>(Request.RequestUri + newMovie.MovieId.ToString(),
-                    newMovie);
+                return Created<Movie>(Request.RequestUri + newMovie.MovieId.ToString(),
+                        newMovie);
             }
             catch (Exception ex)
             {
