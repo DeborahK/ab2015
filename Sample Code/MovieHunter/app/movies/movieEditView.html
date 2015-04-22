@@ -4,7 +4,8 @@
     </div>
 
     <div class="panel-body">
-        <form class="form-horizontal" name="movieForm"
+        <form class="form-horizontal" 
+              name="movieForm"
               novalidate>
             <fieldset>
                 <legend>Edit Movie Information</legend>
@@ -27,17 +28,10 @@
                     </div>
                     <span class="help-block has-error"
                           ng-if="movieForm.inputMovieTitle.$dirty">
-                        <span ng-show="movieForm.inputMovieTitle.$error.required">
-                            Movie title is required.
-                        </span>
-                        <span ng-show="movieForm.inputMovieTitle.$error.minlength">
-                            Movie title must be at least 3 characters in length.
-                        </span>
-                        <span ng-show="movieForm.inputMovieTitle.$error.maxlength">
-                            Movie title cannot exceed 50 characters in length.
-                        </span>
-                        <span ng-show="movieForm.inputMovieTitle.$error.duplicateTitle">
-                            That movie title has already been used.
+                        <span ng-messages="movieForm.inputMovieTitle.$error">
+                            <span ng-message="required">Movie title is required</span>
+                            <span ng-message="minlength">Movie title must be at least 3 characters in length</span>
+                            <span ng-message="maxlength">Movie title cannot exceed 50 characters in length</span>
                         </span>
                     </span>
                 </div>
@@ -61,14 +55,10 @@
                     </div>
                     <span class="help-block has-error"
                           ng-if="movieForm.inputDirector.$dirty">
-                        <span ng-show="movieForm.inputDirector.$error.required">
-                            Director is required.
-                        </span>
-                        <span ng-show="movieForm.inputDirector.$error.minlength">
-                            Director must be at least 3 characters in length.
-                        </span>
-                        <span ng-show="movieForm.inputDirector.$error.maxlength">
-                            Director cannot exceed 50 characters in length.
+                        <span ng-messages="movieForm.inputDirector.$error">
+                            <span ng-message="required">Director is required</span>
+                            <span ng-message="minlength">Director must be at least 3 characters in length</span>
+                            <span ng-message="maxlength">Director cannot exceed 50 characters in length</span>
                         </span>
                     </span>
                 </div>

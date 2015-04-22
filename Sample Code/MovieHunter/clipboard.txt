@@ -1,14 +1,4 @@
 ﻿--- Validation Messages ---
-                    <!-- With ngMessages -->
-                    <span class="help-block has-error"
-                           ng-if="movieForm.inputMovieTitle.$dirty">
-                         <span ng-messages="movieForm.inputMovieTitle.$error">
-                             <span ng-message="required">Movie title is required</span>
-                             <span ng-message="minlength">Movie title must be at least 3 characters in length</span>
-                             <span ng-message="maxlength">Movie title cannot exceed 50 characters in length</span>
-                         </span>
-                     </span>
-
 					 <!-- With ngMessages-include -->
                     <span class="help-block has-error"
                           ng-if="movieForm.inputMovieTitle.$dirty">
