@@ -12,15 +12,17 @@
         return {
             restrict: "A",
             require: "ngModel",
+            scope: {
+                movieId: "=duplicateTitleValidator"
+            },
             link: function (scope, element, attrs, ngModel) {
-                var movieId = attrs.duplicateTitleValidator;
 
                 ngModel.$asyncValidators.duplicateTitle = function (modelValue) {
                     var defer = $q.defer();
 
                     movieResource.get({ title: modelValue },
                         function (response) {
-                            if (response.movieId != movieId) {
+                            if (response.movieId != scope.movieId) {
                                 // Found a row
                                 defer.reject("Exists");
                             } else {
