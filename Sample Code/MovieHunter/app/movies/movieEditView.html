@@ -14,9 +14,6 @@
                 <!--<div class="form-group"
                      ng-class="{'has-error':movieForm.inputMovieTitle.$invalid &&
                     movieForm.inputMovieTitle.$dirty}">-->
-                <!--<div class="form-group"
-                     ng-class="{'has-error':movieForm.inputMovieTitle.$invalid &&
-                    movieForm.inputMovieTitle.$touched}">-->
                     <label class="col-md-2 control-label"
                            for="inputMovieTitle">Movie Title</label>
 
@@ -33,7 +30,7 @@
                     </div>
                     <span class="help-block">
                         <!--<span class="help-block"
-                        ng-if="movieForm.inputMovieTitle.$touched">-->
+                        ng-if="movieForm.inputMovieTitle.$dirty">-->
                         <span ng-messages="movieForm.inputMovieTitle.$error">
                             <span ng-message="required">Movie title is required</span>
                             <span ng-message="minlength">Movie title must be at least 3 characters in length</span>
