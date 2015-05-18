@@ -1,7 +1,7 @@
 ﻿--- Validation Messages ---
 					 <!-- With ngMessages-include -->
                     <span class="help-block has-error"
-                          ng-if="movieForm.inputMovieTitle.$dirty">
+                          ng-if="movieForm.inputMovieTitle.$touched">
                         <span ng-messages="movieForm.inputMovieTitle.$error"
                               ng-messages-include="app/validationMessages.html">
                         </span>
