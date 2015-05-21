@@ -6,9 +6,9 @@
         .factory("movieResource",
                 ["$resource",
                  "appSettings",
-                    productResource]);
+                    movieResource]);
 
-    function productResource($resource, appSettings) {
+    function movieResource($resource, appSettings) {
         return $resource(appSettings.serverPath + "/api/movies/:movieId");
     }
 }());
