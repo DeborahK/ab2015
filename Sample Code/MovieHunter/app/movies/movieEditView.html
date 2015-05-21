@@ -11,9 +11,9 @@
                 <legend>Edit Movie Information</legend>
                 <div class="form-group"
                      ng-class="{'has-error':movieForm.inputMovieTitle.$invalid}">
-                <!--<div class="form-group"
-                     ng-class="{'has-error':movieForm.inputMovieTitle.$invalid &&
-                    movieForm.inputMovieTitle.$dirty}">-->
+                    <!--<div class="form-group"
+                         ng-class="{'has-error':movieForm.inputMovieTitle.$invalid &&
+                        movieForm.inputMovieTitle.$dirty}">-->
                     <label class="col-md-2 control-label"
                            for="inputMovieTitle">Movie Title</label>
 
@@ -37,6 +37,11 @@
                             <span ng-message="maxlength">Movie title cannot exceed 50 characters in length</span>
                         </span>
                     </span>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-8" style="color:cornflowerblue">
+                        Current value is: {{vm.movie.title}}
+                    </div>
                 </div>
 
                 <div class="form-group"
